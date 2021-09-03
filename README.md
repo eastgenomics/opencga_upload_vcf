@@ -1,11 +1,26 @@
 <!-- dx-header -->
-# opencga-upload-v1 (DNAnexus Platform App)
 
-App to upload vcf files from DNAnexus to OpenCGA
+# opencga_upload_vcf (DNAnexus Platform App)
 
-This is the source code for an app that runs on the DNAnexus Platform.
-For more information about how to run or modify it, see
-https://documentation.dnanexus.com/.
+## What does this app do?
+
+Upload an array of VCF files from DNAnexus platform to OpenCGA - Project/Study.
+
+## What are typical use cases for this app?
+
+This app may be executed as a standalone app.
+
+## What data are required for this app to run?
+
+This app requires the following files:
+- Config file (OpenCGA Username, OpenCGA password, Project, Study, Directory)
+- VCF files (array of VCF files)
+
+## What does this app output?
+
+This app outputs a output text file mentioning the last vcf file name and the project/study name. Uploaded file needs to check in OpenCGA app with tree command seperatly.
+
+### This app was made by EMEE GLH
 <!-- /dx-header -->
 
 <!-- Insert a description of your app here -->
@@ -19,3 +34,4 @@ comments.
 
 For more info, see https://documentation.dnanexus.com/developer.
 -->
+
