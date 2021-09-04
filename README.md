@@ -13,12 +13,12 @@ This app may be executed as a standalone app.
 ## What data are required for this app to run?
 
 This app requires the following files:
-- Config file (OpenCGA Username, OpenCGA password, Project, Study, Directory)
-- VCF files (array of VCF files)
+- Config file with OpenCGA account and project details (Username, Password, Project, Study, Directory)
+- Array of VCF files (examples: Sample_1.vcf.tar.gz, Sample_2.vcf.tar.gz...)
 
 ## What does this app output?
 
-This app upload an array of VCF files to the OpenCGA and print output text file mentioning the last VCF file name and the project/study name. Uploaded VCF file needs to check in OpenCGA with tree command seperatly.
+This app upload an array of VCF files from DNAnexus platform to the OpenCGA and print output text file mentioning the last VCF file name and the project/study name. Uploaded VCF file needs to confirm in OpenCGA platform with tree command seperatly.
 
 ### This app was made by EMEE GLH
 <!-- /dx-header -->
