@@ -18,7 +18,7 @@ This app requires the following files:
 
 ## What does this app output?
 
-This app outputs a output text file mentioning the last vcf file name and the project/study name. Uploaded file needs to check in OpenCGA app with tree command seperatly.
+This app upload an array of VCF files to the OpenCGA and print output text file mentioning the last VCF file name and the project/study name. Uploaded VCF file needs to check in OpenCGA with tree command seperatly.
 
 ### This app was made by EMEE GLH
 <!-- /dx-header -->
