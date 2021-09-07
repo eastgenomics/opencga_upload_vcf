@@ -1,0 +1,2 @@
+#USERNAME:PASSWORD:PROJECT:STUDY:DIRECTORY-OPENCGA-IVA
+rmore:PASSWORD:test_grch38:multiallelic:ravi_test
