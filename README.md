@@ -17,6 +17,7 @@ This app requires the following files:
 Please note that Directory (eg. ravi_test) should be exist in OpenCGA, if not create it. 
 
 Example: Config.txt
+
 #USERNAME:PASSWORD:PROJECT:STUDY:DIRECTORY-OPENCGA-IVA
 
 rmore:PASSWORD:test_grch38:multiallelic:ravi_test
