@@ -14,6 +14,11 @@ This app may be executed as a standalone app.
 
 This app requires the following files:
 - Config file with OpenCGA account and project details (Username, Password, Project, Study, Directory)
+Please note that Directory (eg. ravi_test) should be exist in OpenCGA, if not create it. 
+    Example: Config.txt
+    #USERNAME:PASSWORD:PROJECT:STUDY:DIRECTORY-OPENCGA-IVA
+    rmore:PASSWORD:test_grch38:multiallelic:ravi_test
+
 - Array of VCF files (examples: Sample_1.vcf.tar.gz, Sample_2.vcf.tar.gz...)
 
 ## What does this app output?
