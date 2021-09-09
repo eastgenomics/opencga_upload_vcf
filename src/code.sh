@@ -8,22 +8,11 @@
 # Your job's input variables (if any) will be loaded as environment
 # variables before this script runs.  Any array inputs will be loaded
 # as bash arrays.
-#
-# Any code outside of main() (or any entry point you may add) is
-# ALWAYS executed, followed by running the entry point itself.
-#
-# See https://documentation.dnanexus.com/developer for tutorials on how
-# to modify this file.
 
 main() {
 
     echo "Value of input_vcf_file: '${input_vcf_file[@]}'"
     echo "Value of input_config_file: '$input_config_file'"
-
-    # The following line(s) use the dx command-line tool to download your file
-    # inputs to the local file system using variable names for the filenames. To
-    # recover the original filenames, you can use the output of "dx describe
-    # "$variable" --name".
 
     # install java
     sudo apt install openjdk-16-jre-headless -y
@@ -58,18 +47,7 @@ main() {
     # reported in the job_error.json file, then the failure reason
     # will be AppInternalError with a generic error message.
 
-    # The following line(s) use the dx command-line tool to upload your file
-    # outputs after you have created them on the local file system.  It assumes
-    # that you have used the output field name for the filename for each output,
-    # but you can change that behavior to suit your needs.  Run "dx upload -h"
-    # to see more options to set metadata.
-
     output_file=$(dx upload output_file --brief)
-
-    # The following line(s) use the utility dx-jobutil-add-output to format and
-    # add output variables to your job's output as appropriate for the output
-    # class.  Run "dx-jobutil-add-output -h" for more information on what it
-    # does.
 
     dx-jobutil-add-output output_file "$output_file" --class=file
 }
