@@ -1,5 +1,5 @@
 <!-- dx-header -->
-# OpenCGA Configuration Setup (Please note that this is mendedory before running the app)
+# OpenCGA Configuration Setup (Please note that this is mendedory building the app in DNAnexus)
 
 This folder is created intentionally for hosting the copy of OpenCGA bundle for installation.
 
