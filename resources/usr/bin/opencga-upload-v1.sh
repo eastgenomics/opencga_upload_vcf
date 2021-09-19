@@ -13,21 +13,21 @@ while getopts i:p:o: flag
 do
     case "${flag}" in
         i) Input_vcf=${OPTARG};;
-        p) Project=${OPTARG};;
+        p) Config_file=${OPTARG};;
         o) Output=${OPTARG};;
     esac
 done
 
 echo "Input vcf file name: $Input_vcf";
-echo "Project Study name: $Project";
+echo "Config file name: $Config_file";
 echo "Output name: $Output";
 
-#Reading Project information from file
+#Reading config file
 while read -r line
 do
     [[ "$line" =~ ^#.*$ ]] && continue
     IFS=":" read -r -a arrayName <<< "$line"
-done < "$Project"
+done < "$Config_file"
 
 #Login with username and password 
 echo "USERNAME: ${arrayName[0]}"
