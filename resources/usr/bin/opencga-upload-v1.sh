@@ -26,19 +26,19 @@ echo "Output name: $Output";
 while read -r line
 do
     [[ "$line" =~ ^#.*$ ]] && continue
-    IFS=":" read -r -a arrayName <<< "$line"
+    IFS=":" read -r -a ConfigInfo <<< "$line"
 done < "$Config_file"
 
 #Login with username and password 
-echo "USERNAME: ${arrayName[0]}"
-echo "PASSWORD: ${arrayName[1]}"
-/home/dnanexus/opencga-client-2.1.0-rc2_v1/bin/opencga.sh users login -u ${arrayName[0]} <<< ${arrayName[1]}
+echo "USERNAME: ${ConfigInfo[0]}"
+echo "PASSWORD: ${ConfigInfo[1]}"
+/home/dnanexus/opencga-client-2.1.0-rc2_v1/bin/opencga.sh users login -u ${ConfigInfo[0]} <<< ${ConfigInfo[1]}
 
 # Upload vcf files using the config file information (OpenCGA login, Project, Study, and Directory)
-echo "PROJECT: ${arrayName[2]}"
-echo "STUDY: ${arrayName[3]}"
-echo "DIRECTORY: ${arrayName[4]}"
-/home/dnanexus/opencga-client-2.1.0-rc2_v1/bin/opencga.sh files upload --study ${arrayName[2]}:${arrayName[3]} -i $Input_vcf --catalog-path ${arrayName[4]}
+echo "PROJECT: ${ConfigInfo[2]}"
+echo "STUDY: ${ConfigInfo[3]}"
+echo "DIRECTORY: ${ConfigInfo[4]}"
+/home/dnanexus/opencga-client-2.1.0-rc2_v1/bin/opencga.sh files upload --study ${ConfigInfo[2]}:${ConfigInfo[3]} -i $Input_vcf --catalog-path ${ConfigInfo[4]}
 
 # Print the VCF file names with the Project and Study name in output file
-echo -e "\n***\n$Input_vcf file is uploaded to the Project:${arrayName[2]} and Study:${arrayName[3]}\n***\n" > $Output
+echo -e "\n***\n$Input_vcf file is uploaded to the Project:${ConfigInfo[2]} and Study:${ConfigInfo[3]}\n***\n" > $Output
