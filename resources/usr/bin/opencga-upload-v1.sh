@@ -27,7 +27,6 @@ while read -r line
 do
     [[ "$line" =~ ^#.*$ ]] && continue
     IFS=":" read -r -a arrayName <<< "$line"
-
 done < "$Project"
 
 #Login with username and password 
