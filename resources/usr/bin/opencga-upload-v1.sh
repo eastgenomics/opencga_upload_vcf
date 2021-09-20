@@ -41,4 +41,7 @@ echo "DIRECTORY: ${ConfigInfo[4]}"
 /home/dnanexus/opencga-client-2.1.0-rc2_v1/bin/opencga.sh files upload --study ${ConfigInfo[2]}:${ConfigInfo[3]} -i $Input_vcf --catalog-path ${ConfigInfo[4]}
 
 # Print the VCF file names with the Project and Study name in output file
-echo -e "\n***\n$Input_vcf file is uploaded to the Project:${ConfigInfo[2]} and Study:${ConfigInfo[3]}\n***\n" > $Output
+echo -e "\n***\n$Input_vcf file is uploaded to the Project:${ConfigInfo[2]} and Study:${ConfigInfo[3]}\n***\n" >> $Output
+
+echo -e "\n***\nPlease check uploaded file using following command after login into OpenCGA\n<PATH>/opencga.sh files tree --study <STUDY_NAME> --folder <DIRECTORY>\n" > $Output
+
