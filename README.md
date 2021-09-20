@@ -14,7 +14,7 @@ This app may be executed as a standalone app.
 
 This app requires the following files:
 - Config file (eg. Config.txt): This file must have OpenCGA account and project information mainly Username, Password, Project, Study, and Directory. 
-Please note that Directory (eg. ravi_test) should be exist in OpenCGA, if not create it.
+Please note that Directory (eg. <STUDY_NAME>) should be exist in OpenCGA, if not create it. To crete directory in OpenCGA, use this command (eg. <PATH>/opencga.sh files create --study <STUDY_NAME> --path <STUDY_NAME>
 
 - Array of VCF files (eg. Sample_1.vcf.tar.gz, Sample_2.vcf.tar.gz...)
 
