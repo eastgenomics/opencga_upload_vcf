@@ -8,11 +8,11 @@
   },
   "inputSpec": [
     {
-      "name": "input_vcf_file",
-      "label": "Input Vcf File",
+      "name": "input_vcf_files",
+      "label": "Input Vcf Files",
       "help": "",
       "class": "array:file",
-      "patterns": [".vcf.gz"],
+      "patterns": [".vcf*"],
       "optional": false
     },
     {

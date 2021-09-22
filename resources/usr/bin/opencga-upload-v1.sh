@@ -31,7 +31,6 @@ done < "$Config_file"
 
 #Login with username and password 
 echo "USERNAME: ${ConfigInfo[0]}"
-echo "PASSWORD: ${ConfigInfo[1]}"
 /home/dnanexus/opencga-client-2.1.0-rc2_v1/bin/opencga.sh users login -u ${ConfigInfo[0]} <<< ${ConfigInfo[1]}
 
 # Upload vcf files using the config file information (OpenCGA login, Project, Study, and Directory)
