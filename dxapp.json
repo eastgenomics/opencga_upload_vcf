@@ -1,7 +1,7 @@
 {
   "name": "opencga_upload_vcf_v1.0.0",
   "title": "opencga_upload_vcf_v1.0.0",
-  "summary": "App to upload vcf files from DNAnexus to OpenCGA",
+  "summary": "App to upload VCF files from DNAnexus to OpenCGA",
   "dxapi": "1.0.0",
   "properties": {
     "githubRelease": "v1.0.0"
@@ -9,10 +9,10 @@
   "inputSpec": [
     {
       "name": "input_vcf_files",
-      "label": "Input Vcf Files",
+      "label": "Input VCF Files",
       "help": "",
       "class": "array:file",
-      "patterns": [".vcf*"],
+      "patterns": ["*.vcf", "*.vcf.gz"],
       "optional": false
     },
     {

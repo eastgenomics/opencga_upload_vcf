@@ -6,7 +6,7 @@
 #Author: Dr. Ravi P. More (Research Associate, Department of Paediatrics, University of Cambridge, Email: Ravi.More@addenbrookes.nhs.ac.uk)
 #Date: 20-08-2021 
 #USAGE: sh opencga-upload-v1.sh -i $PATH/<SAMPLE_NAME>.vcf.gz -p $PATH/Config.txt -o $PATH/outfile.txt
-#Example: sh /home/usr/opencga-client-2.1.0-rc2/bin/opencga-upload-v1.sh -i /home/usr/Sampple.vcf.gz -p /home/usr/Config.txt -o /home/usr/Output.txt
+#Example: sh /home/usr/opencga-client-2.1.0-rc2/bin/opencga-upload-v1.sh -i /home/usr/Sample.vcf.gz -p /home/usr/Config.txt -o /home/usr/Output.txt
 ##################
 
 while getopts i:p:o: flag
@@ -42,5 +42,4 @@ echo "DIRECTORY: ${ConfigInfo[4]}"
 # Print the VCF file names with the Project and Study name in output file
 echo -e "\n***\n$Input_vcf file is uploaded to the Project:${ConfigInfo[2]} and Study:${ConfigInfo[3]}\n***\n" >> $Output
 
-echo -e "\n***\nPlease check uploaded file using following command after login into OpenCGA\n<PATH>/opencga.sh files tree --study <STUDY_NAME> --folder <DIRECTORY>\n" > $Output
 
