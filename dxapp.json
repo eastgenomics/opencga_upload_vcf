@@ -1,21 +1,24 @@
 {
-  "name": "opencga-upload-v1",
-  "title": "opencga-upload-v1",
-  "summary": "App to upload vcf files from DNAnexus to OpenCGA",
+  "name": "opencga_upload_vcf_v1.0.0",
+  "title": "opencga_upload_vcf_v1.0.0",
+  "summary": "App to upload VCF files from DNAnexus to OpenCGA",
   "dxapi": "1.0.0",
+  "properties": {
+    "githubRelease": "v1.0.0"
+  },
   "inputSpec": [
     {
-      "name": "input_vcf_file",
-      "label": "Input_Vcf_File",
+      "name": "input_vcf_files",
+      "label": "Input VCF Files",
       "help": "",
       "class": "array:file",
-      "patterns": ["*"],
+      "patterns": ["*.vcf", "*.vcf.gz"],
       "optional": false
     },
     {
       "name": "input_config_file",
-      "label": "Input_Config_file",
-      "help": "",
+      "label": "Input Config file",
+      "help": "OpenCGA account and project/study details",
       "class": "file",
       "patterns": ["*"],
       "optional": false
@@ -24,8 +27,8 @@
   "outputSpec": [
     {
       "name": "output_file",
-      "label": "Output_File",
-      "help": "",
+      "label": "Output File",
+      "help": "One or more vcf files to be uploaded by opencga",
       "class": "file",
       "patterns": ["*"]
     }
@@ -34,7 +37,7 @@
     "interpreter": "bash",
     "timeoutPolicy": {
       "*": {
-        "hours": 48
+        "hours": 6
       }
     },
     "distribution": "Ubuntu",
